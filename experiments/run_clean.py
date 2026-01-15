@@ -102,10 +102,17 @@ def main():
         "ece": ece,
         "entropy": entropy
     }
+
     with open("experiments/results_clean_cnn.json", "w") as f:
         json.dump(results, f, indent=4)
+
+    # Ensure checkpoints directory exists before saving
+    os.makedirs("checkpoints", exist_ok=True)
+    torch.save(model.state_dict(), "checkpoints/cnn_clean.pt")
+
 
 if __name__ == "__main__":
     main()
 
-torch.save(model.state_dict(), "checkpoints/cnn_clean.pt")
+# Ensure checkpoints directory exists before saving
+os.makedirs("checkpoints", exist_ok=True)

@@ -1,6 +1,3 @@
-__pycache__/
-*.pyc
-.env
 # =========================
 # Python
 # =========================
@@ -8,50 +5,10 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.log
-
-# =========================
-# Virtual Environments
-# =========================
 .env
 .venv
-venv/
 env/
-
-# =========================
-# PyTorch / ML Artifacts
-# =========================
-checkpoints/
-*.pt
-*.pth
-*.ckpt
-
-# =========================
-# Datasets (DO NOT COMMIT)
-# =========================
-data/cifar10/
-data/cifar10c/
-data/**/
-
-# =========================
-# Experiment Outputs
-# =========================
-experiments/*.json
-experiments/*.csv
-
-# =========================
-# Plots & Figures (Generated)
-# =========================
-plots/
-paper/figures/*.png
-paper/figures/*.pdf
-paper/figures/*.jpg
-
-# =========================
-# Jupyter / Colab
-# =========================
-.ipynb_checkpoints/
-*.ipynb
+venv/
 
 # =========================
 # OS / Editor
@@ -62,13 +19,39 @@ Thumbs.db
 .idea/
 
 # =========================
-# Quantum / PennyLane Cache
+# Data (IMPORTANT)
 # =========================
-.cache/
-*.qml
+data/cifar10/
+data/cifar10c/
+data/**/*.npy
+data/**/*.npz
+data/**/*.pt
+data/**/*.pth
 
 # =========================
-# Temporary Files
+# Checkpoints & Results
 # =========================
-tmp/
-*.tmp
+checkpoints/
+experiments/*.json
+experiments/*.log
+
+# =========================
+# Plots (optional: keep or ignore)
+# =========================
+plots/*.png
+plots/*.pdf
+
+# =========================
+# LaTeX build files
+# =========================
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+
+# =========================
+# Notebooks (if any)
+# =========================
+*.ipynb_checkpoints
